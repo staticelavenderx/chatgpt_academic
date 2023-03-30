@@ -136,7 +136,7 @@ dmypy.json
 history
 ssr_conf
 config_private.py
-gpt_log
+# gpt_log
 private.md
 private_upload
 other_llms
