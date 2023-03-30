@@ -99,7 +99,10 @@ def 解析一个Python项目(txt, top_p, temperature, chatbot, history, systemPr
         report_execption(chatbot, history, a = f"解析项目: {txt}", b = f"找不到本地项目或无权访问: {txt}")
         yield chatbot, history, '正常'
         return
-    file_manifest = [f for f in glob.glob(f'{project_folder}/**/*.js', recursive=True)]
+
+    file_manifest = [f for f in glob.glob(f'{project_folder}/**/*.py', recursive=True)]
+    file_manifest += [f for f in glob.glob(f'{project_folder}/**/*.html', recursive=True)]
+    file_manifest += [f for f in glob.glob(f'{project_folder}/**/*.js', recursive=True)]
     if len(file_manifest) == 0:
         report_execption(chatbot, history, a = f"解析项目: {txt}", b = f"找不到任何python文件: {txt}")
         yield chatbot, history, '正常'
