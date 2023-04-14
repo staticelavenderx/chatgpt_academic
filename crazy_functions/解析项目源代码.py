@@ -43,9 +43,6 @@ def 解析源代码(file_manifest, project_folder, top_p, temperature, chatbot, 
         chatbot.append(("完成了吗？", res))
         yield chatbot, history, msg
 
-
-
-
 @CatchException
 def 解析项目本身(txt, top_p, temperature, chatbot, history, systemPromptTxt, WEB_PORT):
     history = []    # 清空历史，以免输入溢出
@@ -108,7 +105,6 @@ def 解析一个Python项目(txt, top_p, temperature, chatbot, history, systemPr
         yield chatbot, history, '正常'
         return
     yield from 解析源代码(file_manifest, project_folder, top_p, temperature, chatbot, history, systemPromptTxt)
-
 
 @CatchException
 def 解析一个C项目的头文件(txt, top_p, temperature, chatbot, history, systemPromptTxt, WEB_PORT):

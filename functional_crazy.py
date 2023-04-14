@@ -18,11 +18,11 @@ def get_crazy_functionals():
         "请解析并解构此项目本身": {
             "Function": 解析项目本身
         },
-        "解析整个py项目": {
+        "解析整个代码项目": {
             "Color": "stop",    # 按钮颜色
             "Function": 解析一个Python项目
         },
-        "解析整个C++项目头文件": {
+        "翻译整个项目": {
             "Color": "stop",    # 按钮颜色
             "Function": 解析一个C项目的头文件
         },
@@ -48,11 +48,11 @@ def get_crazy_functionals():
 
     # VisibleLevel=1 经过测试，但功能未达到理想状态
     if UserVisibleLevel >= 1:
-        from crazy_functions.批量总结PDF文档 import 批量总结PDF文档
+        from crazy_functions.批量总结PDF文档 import 批量翻译并总结PDF文档
         function_plugins.update({
-            "[仅供开发调试] 批量总结PDF文档": {
+            "[仅供开发调试] 批量翻译并总结PDF文档": {
                 "Color": "stop",
-                "Function": 批量总结PDF文档
+                "Function": 批量翻译并总结PDF文档
             },
         })
 
